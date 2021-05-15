@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GestionnaireSerie.infoSerie">
+
+    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical" Spacing="15" BackgroundColor="Silver">
+        <StackLayout BackgroundColor="Silver"
+                                     Orientation="Vertical"
+                                     HeightRequest="50">
+                    <StackLayout Orientation="Horizontal" >
+                <Label x:Name="nomSerie" Text="" HorizontalOptions="Center"/>
+                <Button x:Name="moin" Text="-" BackgroundColor="Silver" BorderColor="Gray" BorderWidth="2" CornerRadius="20" Clicked="moin_Clicked" HorizontalOptions="StartAndExpand"/>
+                        <Label x:Name="nbSaisons" Text="" BackgroundColor="Silver" HorizontalOptions="CenterAndExpand"/>
+                        <Button x:Name="plus" Text="+" BackgroundColor="Silver" BorderColor="Gray" BorderWidth="2" CornerRadius="20" Clicked="plus_Clicked" HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                </StackLayout>
+    </StackLayout>
+
+</ContentPage>

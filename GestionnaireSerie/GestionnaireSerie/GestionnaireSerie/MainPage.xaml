@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GestionnaireSerie.MainPage">
+
+    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical" Spacing="15" BackgroundColor="Silver">
+        <Frame BackgroundColor="Gray" Padding="20">
+            <Label Text="Gestionnaire de série" FontSize="Title" VerticalOptions="Start" HorizontalOptions="Center" FontAttributes="Bold" TextColor="Black"/>
+        </Frame>
+        <Entry x:Name="serie" Placeholder="Série..." HorizontalTextAlignment="Center"/>
+        <Button x:Name="valider" Text="Ajouter une nouvelle série"  BackgroundColor="Silver" BorderColor="Gray" BorderWidth="2" CornerRadius="20" Clicked="valider_Clicked"/>
+        <ListView x:Name="listeSerie"
+                  HeightRequest="1">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout BackgroundColor="Gray"
+                                     Orientation="Vertical"
+                                     HeightRequest="500">
+                            <StackLayout Orientation="Horizontal" >
+                                <Label Text="{Binding NomSerie}"
+                                       TextColor="Black" 
+                                       FontSize="25"
+                                       HorizontalTextAlignment="Center"
+                                       HorizontalOptions="Center"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
